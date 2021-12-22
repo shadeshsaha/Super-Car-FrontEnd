@@ -7,7 +7,7 @@ const AddNewForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/Cars", data)
+      .post("https://salty-harbor-29929.herokuapp.com/Cars", data)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Success!", "New Car Added successfully", "Success").then(() =>

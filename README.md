@@ -12,19 +12,19 @@
 
 ### Front-End
 
--> React
--> React Router
--> Tailwind CSS
--> React Spinners
--> Sweetalert
+-> React <br>
+-> React Router <br>
+-> Tailwind CSS <br>
+-> React Spinners <br>
+-> Sweetalert <br>
 
 ### Back-End
 
--> MongoDB
--> ExpressJS
--> NodeJS
+-> MongoDB <br>
+-> ExpressJS <br>
+-> NodeJS <br>
 
 ### Hosting
 
--> Firebase
--> Heroku
+-> Firebase <br>
+-> Heroku <br>

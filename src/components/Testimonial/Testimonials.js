@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/testimonial")
+      .get("https://salty-harbor-29929.herokuapp.com/testimonial")
       .then((res) => setTestimonialData(res.data));
   }, []);
 

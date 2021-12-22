@@ -16,7 +16,7 @@ const MyBookingScreen = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("http://localhost:5000/booking")
+    fetch("https://salty-harbor-29929.herokuapp.com/booking")
       .then((res) => res.json())
       .then((data) =>
         setMyBookings(data.filter((item) => item.data.email === user.email))
@@ -42,7 +42,7 @@ const MyBookingScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:5000/booking/${id}`)
+          .delete(`https://salty-harbor-29929.herokuapp.com/booking/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has been deleted", {

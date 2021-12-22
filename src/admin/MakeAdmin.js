@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     setEmail(data.email);
     const email = data.email;
     const user = { email };
-    fetch("http://localhost:5000/admin", {
+    fetch("https://salty-harbor-29929.herokuapp.com/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

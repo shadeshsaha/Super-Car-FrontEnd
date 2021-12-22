@@ -23,8 +23,7 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    // fetch("https://ancient-castle-52925.herokuapp.com/tours")
-    fetch("http://localhost:5000/Cars")
+    fetch("https://salty-harbor-29929.herokuapp.com/Cars")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -38,8 +37,7 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    // const url = `https://ancient-castle-52925.herokuapp.com/drones/${id}`;
-    const url = `http://localhost:5000/Cars${id}`;
+    const url = `https://salty-harbor-29929.herokuapp.com/Cars${id}`;
     fetch(url, {
       method: "DELETE",
     })

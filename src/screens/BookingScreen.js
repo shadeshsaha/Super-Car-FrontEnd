@@ -10,7 +10,7 @@ const BookingScreen = () => {
 
   //bookings details
   useEffect(() => {
-    fetch(`http://localhost:5000/Cars/${id}`)
+    fetch(`https://salty-harbor-29929.herokuapp.com/Cars/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

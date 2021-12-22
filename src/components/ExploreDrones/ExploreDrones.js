@@ -9,7 +9,7 @@ const ExploreDrones = () => {
   const [dronePack, setDronePack] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Cars")
+    fetch("https://salty-harbor-29929.herokuapp.com/Cars")
       .then((res) => res.json())
       .then((data) => setDronePack(data));
   }, []);
