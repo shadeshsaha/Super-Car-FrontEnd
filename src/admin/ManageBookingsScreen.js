@@ -15,7 +15,7 @@ const ManageBookingsScreen = () => {
   const history = useHistory();
   const { admin } = useAuth();
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/bookings")
+    fetch("http://localhost:5000/booking")
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
   }, []);
@@ -38,13 +38,13 @@ const ManageBookingsScreen = () => {
     swal({
       title: "Are you sure?",
       text: "Are you sure to delete this booking ?",
-      icon: "warning",
+      icon: "Warning",
       buttons: true,
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://ancient-castle-52925.herokuapp.com/bookings/${id}`)
+          .delete(`http://localhost:5000/booking/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has deleted", {
@@ -67,7 +67,7 @@ const ManageBookingsScreen = () => {
     const prevData = prevBooking.data;
     prevData.status = "Approved";
     axios
-      .put(`https://ancient-castle-52925.herokuapp.com/bookings/${id}`, {
+      .put(`http://localhost:5000/booking/${id}`, {
         newData: prevData,
       })
       .then((res) => {
@@ -106,19 +106,19 @@ const ManageBookingsScreen = () => {
                           scope="col"
                           className="text-xs font-medium text-white px-6 py-3 text-left uppercase tracking-wider"
                         >
-                          Title
+                          Model
                         </th>
                         <th
                           scope="col"
                           className="text-xs font-medium text-white px-6 py-3 text-left uppercase tracking-wider"
                         >
-                          Name
+                          Customer Name
                         </th>
                         <th
                           scope="col"
                           className="text-xs font-medium text-white px-6 py-3 text-left uppercase tracking-wider"
                         >
-                          Email
+                          E-mail
                         </th>
                         <th
                           scope="col"

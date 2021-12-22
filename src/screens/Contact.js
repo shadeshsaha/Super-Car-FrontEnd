@@ -18,7 +18,7 @@ const Contact = () => {
       <Fade left>
         <div className="flex justify-center items-center flex-col">
           <h1 className="font-logo text-gray-800 text-3xl font-semibold">
-            Custom Super Car Lamborghini Manufacture Request
+            Custom Lamborghini Manufacture Request
           </h1>
           <div className="h-1 w-72 bg-gray-400 rounded-full"></div>
         </div>

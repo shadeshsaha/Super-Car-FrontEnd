@@ -1,12 +1,8 @@
 import {
-  getAuth,
+  createUserWithEmailAndPassword, getAuth,
   GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  updateProfile,
+  onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup,
+  signOut, updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -96,7 +92,7 @@ const useFirebase = () => {
 
   // admin data load
   useEffect(() => {
-    fetch(`https://ancient-castle-52925.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/user/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -119,7 +115,7 @@ const useFirebase = () => {
   // save user
   const saveUser = (email, displayName, photoURL, method) => {
     const user = { email, displayName, photoURL };
-    fetch("https://ancient-castle-52925.herokuapp.com/users", {
+    fetch("http://localhost:5000/user/", {
       method: method,
       headers: {
         "content-type": "application/json",

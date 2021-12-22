@@ -7,7 +7,7 @@ const AddNewForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://ancient-castle-52925.herokuapp.com/tours", data)
+      .post("http://localhost:5000/Cars", data)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Success!", "New Car Added successfully", "Success").then(() =>
@@ -38,7 +38,7 @@ const AddNewForm = () => {
             cols="30"
             rows="9"
             className="input-primary resize-none"
-            placeholder="Drone Description"
+            placeholder="Model Description"
             {...register("description", { required: true })}
           ></textarea>
         </div>
@@ -53,14 +53,14 @@ const AddNewForm = () => {
           {/* duration  */}
           <input
             className="input-primary"
-            placeholder="Flight Duration"
+            placeholder="Max Speed"
             {...register("duration", { required: true })}
           />
           {/* group members  */}
           <input
             type="number"
             className="input-primary"
-            placeholder="Max numbers of people it can capture"
+            placeholder="Max Numbers Of People"
             {...register("groupMembers", { required: true })}
           />
           {/* price  */}

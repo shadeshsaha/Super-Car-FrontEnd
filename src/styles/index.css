@@ -43,8 +43,7 @@ body::-webkit-scrollbar {
 }
 
 .contact-hero-section {
-  background: linear-gradient(#00000059, #000000cf, #0000006b),
-    url("https://store-guides2.djicdn.com/guides/wp-content/uploads/2019/10/DJI-Mavic-Series-Comparison.jpg");
+  background: linear-gradient(#00000059, #000000cf, #0000006b), url("");
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -54,7 +53,7 @@ body::-webkit-scrollbar {
 /* =================== Register Screen  =======================*/
 .register-screen {
   background: linear-gradient(#00000059, #000000cf, #0000006b),
-    url("https://images.pexels.com/photos/2050718/pexels-photo-2050718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    url("https://wallpapercave.com/wp/wp2716754.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

@@ -30,11 +30,11 @@ const Footer = () => {
                   alt="logo"
                   className="w-13 h-13"
                 />
-                <h1
+                <span
                   className={`text-3xl font-semibold text-gray-800 select-none font-logo`}
                 >
                   Lamborghini
-                </h1>
+                </span>
               </Link>
             </div>
           </div>

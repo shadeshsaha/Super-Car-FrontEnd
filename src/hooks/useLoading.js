@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import PropagateLoader from "react-spinners/PropagateLoader";
+import HashLoader from "react-spinners/HashLoader";
 
 const override = css`
   display: flex;
@@ -12,7 +12,7 @@ const override = css`
 `;
 
 const useLoading = () => {
-  return <PropagateLoader color="#20312d" css={override} size={15} />;
+  return <HashLoader color="#20312d" css={override} size={100} />;
 };
 
 export default useLoading;

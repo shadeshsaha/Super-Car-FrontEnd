@@ -23,7 +23,8 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/tours")
+    // fetch("https://ancient-castle-52925.herokuapp.com/tours")
+    fetch("http://localhost:5000/Cars")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -37,7 +38,8 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    const url = `https://ancient-castle-52925.herokuapp.com/drones/${id}`;
+    // const url = `https://ancient-castle-52925.herokuapp.com/drones/${id}`;
+    const url = `http://localhost:5000/Cars${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -91,7 +93,7 @@ const TourPackCard = (props) => {
             <div className="flex flex-col">
               <p className="text-sm font-primary text-gray-700">Members</p>
               <span className="text-sm text-gray-500">
-                {groupMembers} Peoples
+                {groupMembers} People
               </span>
             </div>
           </div>
