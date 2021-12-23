@@ -45,7 +45,7 @@ const useFirebase = () => {
         }).then(() => {
           swal(
             "Welcome!",
-            `let's explore your favorite drone ${res.user.displayName}`,
+            `Let's Explore Your Favorite Super Car Lamborghini ${res.user.displayName}`,
             "success"
           );
           history.push("/");
@@ -60,13 +60,13 @@ const useFirebase = () => {
       .then((res) => {
         setUser(res.user);
         swal(
-          "Sign in Successful!",
-          `Welcome back ${res.user.displayName}`,
+          "Sign In Successful!",
+          `Welcome Back ${res.user.displayName}`,
           "success"
         );
         history.push("/");
       })
-      .catch((err) => swal("Something went wrong!", `${err.message}`, "error"));
+      .catch((err) => swal("Something Went Wrong!", `${err.message}`, "Error"));
   };
 
   //google sign in
@@ -79,11 +79,11 @@ const useFirebase = () => {
         setUser(user);
         saveUser(user.email, user.displayName, user.photoURL, "PUT");
         // console.log(user);
-        swal("Welcome!", "Account has been created!", "success");
+        swal("Welcome!", "Account Has Been Created!", "success");
         history.push("/");
       })
       .catch((error) => {
-        swal("Something went wrong!", `${error.message}`, "error");
+        swal("Something Went Wrong!", `${error.message}`, "error");
       })
       .finally(() => {
         setIsLoading(false);
@@ -103,11 +103,11 @@ const useFirebase = () => {
     signOut(auth)
       .then(() => {
         setUser({});
-        swal("Logout Successful!", "You are logged out!", "success");
+        swal("Logout Successful!", "You Are Logged Out!", "success");
         history.push("/register");
       })
       .catch((err) => {
-        swal("Something went wrong!", `${err.message}`, "error");
+        swal("Something Went Wrong!", `${err.message}`, "error");
       })
       .finally(() => setIsLoading(false));
   };

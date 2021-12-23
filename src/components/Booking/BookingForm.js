@@ -19,7 +19,7 @@ const BookingForm = ({ bookings, totalBookingCost }) => {
       .post("https://salty-harbor-29929.herokuapp.com/booking", newData)
       .then((response) => {
         if (response.statusText === "OK") {
-          swal("Good job!", "Order has been placed", "success").then(() => {
+          swal("Good job!", "Order Has Been Placed", "Success").then(() => {
             reset();
             history.push("/my-bookings");
           });

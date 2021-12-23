@@ -36,8 +36,8 @@ const ManageBookingsScreen = () => {
   //delete bookings
   const handleDelete = (id) => {
     swal({
-      title: "Are you sure?",
-      text: "Are you sure to delete this booking ?",
+      title: "Are You Sure?",
+      text: "Are You Sure To Delete This Booking ?",
       icon: "Warning",
       buttons: true,
       dangerMode: true,
@@ -47,7 +47,7 @@ const ManageBookingsScreen = () => {
           .delete(`https://salty-harbor-29929.herokuapp.com/booking/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
-              swal("Poof! Booking has deleted", {
+              swal("Poof! Booking Has Deleted", {
                 icon: "success",
               });
               const restBookings = allBookings.filter(({ _id }) => _id !== id);
@@ -55,7 +55,7 @@ const ManageBookingsScreen = () => {
             }
           });
       } else {
-        swal("Booking has not been deleted yet!");
+        swal("Booking Has Not Been Deleted Yet!");
       }
     });
   };

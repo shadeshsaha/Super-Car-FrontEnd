@@ -8,7 +8,7 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    swal("done!", "Message sent successfully", "success");
+    swal("Done!", "Message Sent Successfully", "Success");
     reset();
   };
 
@@ -77,7 +77,7 @@ const Contact = () => {
               <input
                 type="text"
                 className="input-primary"
-                placeholder="Your Color"
+                placeholder="Your Selected Color"
                 {...register("color", { required: true })}
               />
               <button className="btn-primary w-36 ml-auto">Send</button>

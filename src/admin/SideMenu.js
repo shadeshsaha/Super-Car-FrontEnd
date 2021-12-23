@@ -83,7 +83,7 @@ const SideMenu = ({ setControl, control }) => {
                         onClick={() => setControl("launchNewDrone")}
                       >
                         <span className="ml-2 font-primary">
-                          Launch New Drone
+                          Launch New Lamborghini Car
                         </span>
                       </div>
                     </li>

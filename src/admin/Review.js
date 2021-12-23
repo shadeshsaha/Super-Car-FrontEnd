@@ -11,13 +11,13 @@ const Review = () => {
       .then((response) => {
         // console.log(response);
         if (response.statusText === "OK") {
-          swal("Success!", "Thanks for your kind words", "success").then(() =>
+          swal("Success!", "Thanks For Your Kind Words", "Success").then(() =>
             reset()
           );
         }
       })
       .catch((error) => {
-        swal("Something went wrong!", `${error.message}`, "error");
+        swal("Something Went Wrong!", `${error.message}`, "Error");
       });
   };
 

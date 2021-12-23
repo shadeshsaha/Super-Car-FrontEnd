@@ -21,11 +21,11 @@ const MakeAdmin = () => {
       .then((data) => {
         console.log(data);
         if (data.matchedCount > 0) {
-          sweetAlert("done", "admin was set successfully", "success");
+          sweetAlert("Done", "Admin Was Set Successfully", "Success");
         }
       })
       .catch((error) => {
-        sweetAlert("Something went wrong!", `${error.message}`, "error");
+        sweetAlert("Something Went Wrong!", `${error.message}`, "Error");
       });
     reset();
   };
